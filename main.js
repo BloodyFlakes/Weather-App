@@ -41,5 +41,26 @@ async function checkWeather(city) {
   }
 }
 searchBtn.addEventListener("click", () => {
-  checkWeather(searchBox.value);
+  if (searchBox.value.toLowerCase() == "rashed") {
+    // Hardcoded weather for "Rashed"
+    weather.style.cssText = "display: block";
+    document.querySelector(".city").innerHTML = "Maram Heart";
+    document.querySelector(".temp").innerHTML = 69 + `°C`;
+    document.querySelector(".humidity").innerHTML = 3 + `%`;
+    document.querySelector(".wind").innerHTML = 8 + ` km/h`;
+    weatherIcon.src = "images/clouds.png";
+    er.style.cssText = "display: none";
+  } else if (searchBox.value.toLowerCase() == "maram") {
+    // Hardcoded weather for "Maram"
+    weather.style.cssText = "display: block";
+    document.querySelector(".city").innerHTML = "Rashed Heart";
+    document.querySelector(".temp").innerHTML = 69 + `°C`;
+    document.querySelector(".humidity").innerHTML = 13 + `%`;
+    document.querySelector(".wind").innerHTML = 7 + ` km/h`;
+    weatherIcon.src = "images/clear.png";
+    er.style.cssText = "display: none";
+  } else {
+    // Fetch weather for user input
+    checkWeather(searchBox.value);
+  }
 });
