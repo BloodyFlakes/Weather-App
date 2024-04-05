@@ -91,7 +91,10 @@ body {
   margin-top: 10px;
   display: none;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
+  .card {
+    max-width: 600px;
+  }
   .details {
     padding: 0;
   }
@@ -103,13 +106,37 @@ body {
     font-size: 20px;
   }
   .search {
-    width: 60%;
+    width: 80%;
   }
   .search input {
     padding: 10px 5px;
     margin-right: 6px;
     font-size: 18px;
     width: 60%;
+  }
+  .search button {
+    width: 50px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .card {
+    max-width: 700px;
+  }
+  .search {
+    width: 100%;
+  }
+  .search button {
+    width: 50px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .card {
+    max-width: 800px;
+  }
+  .search {
+    width: 100%;
   }
   .search button {
     width: 50px;
