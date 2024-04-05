@@ -127,16 +127,6 @@ body {
     width: 50px;
   }
 }
-@media (max-width: 767px) {
-  .details {
-    padding: 0;
-  }
-  .col img {
-    width: 33px;
-  }
-  .humidity,
-  .wind {
-    font-size: 20px;
-  }
+
   
 }
